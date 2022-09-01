@@ -1,13 +1,16 @@
 version: "3"
 
 services:
-  balancer:
+  server:
     image: itzg/minecraft-server:latest
     environment:
-      PHP_IDE_CONFIG: "serverName=Docker"
+      EULA: "TRUE"
+    volumes:
+      - ./data:/data
     networks:
       default:
         ipv4_address: 11.201.100.100
+
 networks:
   default:
     driver: bridge

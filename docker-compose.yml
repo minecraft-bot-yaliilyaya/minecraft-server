@@ -18,6 +18,7 @@ services:
       CFG_DB_HOST: "http://localhost:3306"
       CFG_DB_NAME: "minecraft"
       CFG_DB_PASSWORD_FILE: "/run/secrets/db_password"
+      VERSION: '1.16.5'
     tty: true
     stdin_open: true
     restart: unless-stopped

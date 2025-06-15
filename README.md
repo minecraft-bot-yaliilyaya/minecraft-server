@@ -3,7 +3,7 @@
 
 # attach run command
 ```shell
-docker attach minecraft-server_server_1
+docker compose attach server
 
 
 gamemode creative yaliilyaya #https://minecraft.fandom.com/wiki/Commands/gamemode

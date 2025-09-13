@@ -24,3 +24,18 @@ services:
     restart: unless-stopped
     volumes:
       - ./data:/data
+  bluemap:
+    image: ghcr.io/bluemap-minecraft/bluemap:latest
+    restart: unless-stopped
+    command: -r -u -w
+    ports:
+      - '8100:8100'
+    tty: true
+    stdin_open: true
+    volumes:
+      - './bluemap/config:/app/config'
+      - './data/world:/app/world'
+      - './data/world_nether:/app/world_nether'
+      - './data/world_the_end:/app/world_the_end'
+      - './bluemap/data:/app/data'
+      - './bluemap/web:/app/web'
